@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './form.css';
+import './Styles/form.css';
 import Basic_Details from './Basic_Details';
 import Email_Pass from './Email_Pass';
 import Otp from './Otp';
