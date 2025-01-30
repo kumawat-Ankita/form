@@ -11,8 +11,7 @@ export default function Email_Pass({ setFormStep }) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleClick = (e) => {
-        e.preventDefault();
+    const handleClick = () => {
         setError(false);
 
         if (!formData.password.trim()) {

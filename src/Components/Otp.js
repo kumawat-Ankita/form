@@ -7,8 +7,7 @@ export default function Otp({ setFormStep }) {
 
     const handleChange = (e) => setOtp(e.target.value);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = () => {
         if (!otp.trim()) {
             setError(true);
             return;

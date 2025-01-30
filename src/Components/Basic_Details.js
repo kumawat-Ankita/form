@@ -12,8 +12,7 @@ export default function Basic_Details({ setFormStep }) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleClick = (e) => {
-        e.preventDefault();
+    const handleClick = () => {
         setError(false);
 
         if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.includes('@')) {

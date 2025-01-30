@@ -13,11 +13,9 @@ export default function Form() {
                 <Basic_Details setFormStep={setFormStep} />
             )}
 
-
             {formStep === 'EMAIL_PASS' && (
                 <Email_Pass setFormStep={setFormStep} />
             )}
-
 
             {formStep === 'OTP' && (
                 <Otp setFormStep={setFormStep} />
