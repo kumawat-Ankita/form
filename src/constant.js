@@ -1,0 +1,5 @@
+export const FORM_STEP = {
+    BASIC_DETAILS: "BASIC_DETAILS",
+    EMAIL_PASS: "EMAIL_PASS",
+    OTP: "OTP"
+}
