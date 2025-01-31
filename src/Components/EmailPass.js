@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { FORM_STEP } from '../constant';
 
-export default function Email_Pass({ setFormStep }) {
+export default function EmailPass({ setFormStep }) {
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -22,7 +23,7 @@ export default function Email_Pass({ setFormStep }) {
     };
 
     const handleBackClick = () => {
-        setFormStep('BASIC_DETAILS');
+        setFormStep(FORM_STEP.BASIC_DETAILS);
     };
 
     return (
