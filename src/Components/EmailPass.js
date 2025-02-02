@@ -1,29 +1,9 @@
-import React, { useState } from 'react';
-import { FORM_STEP } from '../constant';
+import React from 'react';
 
-export default function EmailPass({ setFormStep }) {
-    const [formData, setFormData] = useState({
-        email: '',
-        password: '',
-    });
-    const [error, setError] = useState(false);
+export default function EmailPass({ formData, setFormData, error }) {
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleClick = () => {
-        setError(false);
-
-        if (!formData.password.trim()) {
-            setError(true);
-            return;
-        }
-        setFormStep('OTP');
-    };
-
-    const handleBackClick = () => {
-        setFormStep(FORM_STEP.BASIC_DETAILS);
     };
 
     return (
@@ -50,11 +30,8 @@ export default function EmailPass({ setFormStep }) {
                     onChange={handleChange}
                 />
             </div>
-            {error && <div className="error">Please enter your password.</div>}
-            <div className="button-group">
-                <button className="back-btn" onClick={handleBackClick}>Back</button>
-                <button className="btn" onClick={handleClick}>Continue</button>
-            </div>
+            {error && <div className="error">{error}</div>}
+
         </div>
     );
 }
